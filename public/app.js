@@ -133,3 +133,50 @@ window.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowLeft') showImage(galleryIndex - 1);
   if (event.key === 'ArrowRight') showImage(galleryIndex + 1);
 });
+
+const dialogueReplies = [
+  {
+    mood: 'เขายิ้มบางๆ เหมือนคำประชดเป็นเพียงข้อมูลอีกชิ้นหนึ่ง',
+    reply: '“เพียงมองเพราะจะได้เห็นปฏิกิริยาการตอบสนองของคุณที่ชัดเจนขึ้นครับ”',
+    question: 'ถ้าผมยังมองต่อไปอีกห้านาที คุณคิดว่าตัวเองจะเผลอแสดงอะไรออกมาก่อน?',
+    tag: 'OBSERVATION / CONTROL'
+  },
+  {
+    mood: 'เขาเอียงศีรษะนิดเดียว ดวงตาสีเขียวไม่ยอมเลื่อนหนี',
+    reply: '“เห็นว่าคุณพยายามทำให้คำถามฟังเหมือนเป็นของผม ทั้งที่จริงๆ คุณอยากรู้ว่าตัวเองถูกมองเป็นแบบไหน”',
+    question: 'คุณอยากให้ผมตอบตามที่เห็นจริงๆ หรืออยากได้คำตอบที่ฟังแล้วสบายใจกว่ากัน?',
+    tag: 'REFLECTION / HONESTY'
+  },
+  {
+    mood: 'ปลายนิ้วเขาเคาะแขนเบาๆ หนึ่งครั้ง ราวกับบันทึกคำว่า “ระวังตัว” ไว้แล้ว',
+    reply: '“กำลังอ่านอยู่ครับ แต่ยังไม่ถึงขั้นตัดสิน คุณมีรายละเอียดให้ดูมากกว่าที่คิด”',
+    question: 'มีส่วนไหนของคุณที่ไม่อยากให้ผมอ่านเจอที่สุด?',
+    tag: 'PROFILE / UNFINISHED'
+  },
+  {
+    mood: 'รอยยิ้มของเขาชัดขึ้นเพียงเสี้ยววินาที แล้วกลับไปนิ่งเหมือนเดิม',
+    reply: '“ผมไม่ค่อยเล่นเกมที่ต้องมีคนแพ้ครับ แต่ถ้าคุณอยากนับคะแนน... ตอนนี้คุณเป็นฝ่ายขยับคิ้วก่อน”',
+    question: 'คุณจะรักษาสายตาไว้ หรือจะเปลี่ยนกติกาเป็นอย่างอื่น?',
+    tag: 'CHALLENGE / TENSION'
+  },
+  {
+    mood: 'เขาเงียบไปนานกว่าปกติ ก่อนลดเสียงลงเหมือนประโยคนี้ไม่ควรถูกได้ยินโดยใครอื่น',
+    reply: '“ได้ครับ แต่อย่าตำหนิผมทีหลังนะ ถ้าสิ่งที่คุณเห็นในแววตาผมไม่ใช่สิ่งที่คุณอยากเจอ”',
+    question: 'คุณอยากรู้จักผมจริงๆ หรือแค่ชอบความรู้สึกตอนถูกผมมองกลับ?',
+    tag: 'INTIMACY / WARNING'
+  }
+];
+
+const dialogueReply = $('#dialogueReply');
+$$('.choice-button').forEach((button) => button.addEventListener('click', () => {
+  const selected = Number(button.dataset.choice);
+  const item = dialogueReplies[selected];
+  $$('.choice-button').forEach((choice) => choice.classList.toggle('selected', choice === button));
+  dialogueReply.innerHTML = `<div class="reply-head"><span>FANGSI / RESPONSE</span><i>${item.tag}</i></div><p class="reply-mood">${item.mood}</p><blockquote>${item.reply}</blockquote><div class="follow-up"><span>QUESTION UNLOCKED</span><p>${item.question}</p></div><button class="reset-dialogue" type="button">เลือกคำตอบอื่น ↻</button>`;
+  dialogueReply.classList.remove('reply-in');
+  requestAnimationFrame(() => dialogueReply.classList.add('reply-in'));
+  $('.reset-dialogue', dialogueReply).addEventListener('click', () => {
+    $$('.choice-button').forEach((choice) => choice.classList.remove('selected'));
+    dialogueReply.innerHTML = '<div class="reply-placeholder"><span>✦</span><p>เลือกคำพูดสักหนึ่งประโยค<br /><small>ฝังซือกำลังรออ่านปฏิกิริยาของคุณ</small></p></div>';
+  });
+}));
