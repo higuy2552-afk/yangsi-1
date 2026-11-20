@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0608" />
+    <meta name="description" content="Fangsi — Sirithara University visitor dossier" />
+    <title>Fangsi — Sirithara University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IM+Fell+English+SC&family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="ambient ambient-a" aria-hidden="true"></div>
+    <div class="ambient ambient-b" aria-hidden="true"></div>
+    <div class="ambient ambient-c" aria-hidden="true"></div>
+
+    <div class="loader" id="loader" aria-label="กำลังเข้าสู่แฟ้มข้อมูล">
+      <div class="loader-rings" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="loader-mark">S</div>
+      <p class="eyebrow">SIRITHARA ARCHIVE · ACCESSING</p>
+      <h1>FANGSI</h1>
+      <div class="loader-line"><span id="loaderProgress"></span></div>
+      <div class="loader-meta"><span id="loaderStatus">คัดลอกตราประทับ...</span><strong id="loaderPercent">00%</strong></div>
+      <button class="enter-button" id="enterButton" type="button" disabled>เปิดแฟ้มข้อมูล <span>↗</span></button>
+    </div>
+
+    <main class="site-shell" id="mainContent" aria-hidden="true">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="กลับไปด้านบน">
+          <span class="brand-symbol">✦</span>
+          <span><b>SIRITHARA</b><small>UNIVERSITY / VISITOR ARCHIVE</small></span>
+        </a>
+        <nav class="main-nav" aria-label="เมนูหลัก">
+          <a href="#dossier">Dossier <span>01</span></a>
+          <a href="#gallery">Gallery <span>02</span></a>
+          <a href="#notes">Notes <span>03</span></a>
+        </nav>
+        <div class="top-actions">
+          <button class="icon-button" id="lightToggle" type="button" aria-label="สลับโหมดแสง" title="สลับโหมดแสง">◐</button>
+          <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+        </div>
+      </header>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#dossier">Dossier <span>01</span></a>
+        <a href="#gallery">Gallery <span>02</span></a>
+        <a href="#notes">Notes <span>03</span></a>
+      </div>
+
+      <section class="hero" id="top">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-copy">
+          <div class="stamp"><span class="stamp-dot"></span> CASE FILE / 2026.11</div>
+          <p class="hero-kicker">THE VISITOR WHO READS THE ROOM</p>
+          <h2>พิทักษ์บดี<br /><em>วังสา</em></h2>
+          <div class="hero-divider"><span>✦</span><i></i><span>✦</span></div>
+          <p class="hero-intro">บางคนเดินเข้ามาในรั้วมหาวิทยาลัยเพื่อเรียนรู้<br />แต่เขาเข้ามาเพื่ออ่าน “ผู้คน”</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#dossier">เปิดอ่านแฟ้ม <span>↓</span></a>
+            <button class="text-button" id="quoteButton" type="button">สุ่มบันทึก <span>⌁</span></button>
+          </div>
+        </div>
+        <div class="hero-portrait-wrap tilt-card" data-tilt>
+          <div class="portrait-halo"></div>
+          <div class="portrait-frame frame-outer"><span></span><span></span><span></span><span></span></div>
+          <div class="portrait-frame frame-inner"></div>
+          <img class="hero-portrait" src="https://i.postimg.cc/3JVB23Pp/IMG-0183.jpg" alt="ภาพตัวละคร Fangsi" />
+          <div class="portrait-overlay"></div>
+          <div class="portrait-caption"><span>PORTRAIT / 01</span><b>FANGSI</b></div>
+          <div class="side-tag side-tag-left">VISITOR</div>
+          <div class="side-tag side-tag-right">EYES ON YOU</div>
+        </div>
+        <div class="hero-side-image side-image-left">
+          <div class="vertical-label">THE OUTSIDER · 01</div>
+          <img src="https://i.postimg.cc/5NT38fZw/mi-m-ch-x-15-20261120111941.png" alt="ภาพประกอบตัวละครด้านข้าง" />
+        </div>
+        <div class="hero-side-image side-image-right">
+          <div class="vertical-label">KASALEE RESIDENCE · 02</div>
+          <img src="https://i.postimg.cc/9Frb4DNp/mi-m-ch-x-15-20261120112217.png" alt="ภาพประกอบตัวละครด้านข้าง" />
+        </div>
+        <div class="scroll-cue"><span></span> SCROLL TO OBSERVE</div>
+      </section>
+
+      <section class="identity-strip" aria-label="ข้อมูลย่อ">
+        <div><span>STATUS</span><strong>VISITOR / บุคคลภายนอก</strong></div>
+        <div><span>AGE / YEAR</span><strong>21 · YEAR 3</strong></div>
+        <div><span>FIELD</span><strong>YOUTH CRIMINOLOGY</strong></div>
+        <div><span>RESIDENCE</span><strong>KASALEE CONDO</strong></div>
+      </section>
+
+      <section class="section dossier-section" id="dossier">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">01 / CHARACTER DOSSIER</p><h3>อ่านระหว่างบรรทัด</h3></div>
+          <p>ข้อมูลที่ถูกเรียบเรียงจาก<br /><em>สายตาของคนที่ชอบมองคน</em></p>
+        </div>
+        <div class="dossier-layout">
+          <aside class="dossier-index">
+            <div class="index-seal">S<span>U</span></div>
+            <div class="index-line"></div>
+            <span class="index-label">ARCHIVE<br />NO. 017 / FS</span>
+            <pre aria-hidden="true">╱╲
+╲  ╱
+╱╲
+╲  ╱</pre>
+          </aside>
+          <div class="dossier-main">
+            <div class="bio-lead reveal">
+              <span class="quote-mark">“</span>
+              <p>ไม่มีนิสัยตายตัวที่แน่ชัด<br />เพราะคนตรงหน้าคือกระจกที่เขาเลือกจะสะท้อนกลับ</p>
+              <span class="quote-author">— FIELD NOTE / UNVERIFIED</span>
+            </div>
+            <div class="info-grid">
+              <article class="info-card reveal"><div class="card-number">01</div><p class="card-label">BASIC INFORMATION</p><h4>ข้อมูลพื้นฐาน</h4><dl><div><dt>Nickname</dt><dd>ฝังซือ <small>(Fangsi)</small></dd></div><div><dt>Full name</dt><dd>พิทักษ์บดี วังสา</dd></div><div><dt>Age / Year</dt><dd>21 ปี <small>ชั้นปีที่ 3 แบบระบบไทย</small></dd></div><div><dt>Status / Role</dt><dd>ผู้เยี่ยมชม <small>Visitor / บุคคลภายนอก</small></dd></div></dl></article>
+              <article class="info-card reveal"><div class="card-number">02</div><p class="card-label">AFFILIATIONS</p><h4>ตำแหน่งในระบบ</h4><dl><div><dt>Major</dt><dd>Institute of Criminology <small>อาชญาวิทยาเด็กและเยาวชน</small></dd></div><div><dt>Club</dt><dd>ไม่มี <small>ไม่สังกัดชมรม</small></dd></div><div><dt>Residence</dt><dd>คอนโด KASALEE</dd></div><div><dt>Arrival</dt><dd>นอกตาราง / สม่ำเสมอ</dd></div></dl></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section visual-section">
+        <div class="visual-stage reveal">
+          <div class="stage-copy"><p class="eyebrow">PHYSICAL APPEARANCE / 02</p><h3>ความเงียบ<br /><em>ที่มีน้ำหนัก</em></h3><p>โครงหน้าคม ดวงตาสีเขียวมรกตที่อ่านยาก และผมสีแดงเข้มที่ไม่เคยเสียเวลาเซ็ตให้เรียบร้อย</p><button class="outline-button" data-open-panel="appearance" type="button">อ่านรายละเอียด <span>+</span></button></div>
+          <div class="stage-image"><img src="https://i.postimg.cc/rF3J5qvj/mi-m-ch-x-15-20261120112322.png" alt="ภาพตัวละคร Fangsi ในท่าทางนิ่งสงบ" /><div class="image-glass"></div><span class="image-note">CRIMSON / EMERALD / SILENCE</span></div>
+          <div class="stage-corner">F</div>
+        </div>
+        <div class="expand-panel" id="appearance"><button class="panel-close" type="button" aria-label="ปิด">×</button><p class="eyebrow">FIELD OBSERVATION</p><div class="appearance-columns"><div><span>BODY PROPORTION</span><p>หุ่นทรง V-Shape เพรียวสมส่วน ไหล่ผายรับกับเอวคมชัด กล้ามเนื้อเรียงตัวสวยพอดี คล่องตัวแต่แฝงพละกำลังเกินหน้าตา</p></div><div><span>FACE & EYES</span><p>โครงหน้าเรียวยาว สันกรามชัด ผิวขาวใส ดวงตาสีเขียวมรกตว่างเปล่า นิ่งสงบแต่คมกริบเหมือนกำลังอ่านเกมอยู่ตลอด</p></div><div><span>TATTOOS / STYLE</span><p>ชื่อของตัวเองเรียงแนวตั้งกลางลำคอ ลายคิวอาร์โค้ดบริเวณแผงอกซ้าย คุมโทนมืดเรียบหรูแบบ street luxury</p></div></div></div>
+      </section>
+
+      <section class="section personality-section" id="notes">
+        <div class="section-heading reveal"><div><p class="eyebrow">03 / SOCIAL BEHAVIOUR</p><h3>กระจกที่ยิ้มได้</h3></div><span class="section-mark">◉</span></div>
+        <div class="personality-grid">
+          <article class="trait-card trait-feature reveal"><span class="trait-icon">◌</span><p class="card-label">OVERALL</p><h4>ปรับจูนตัวเอง<br />ให้เหมือนคนตรงหน้า</h4><p>ท่าที น้ำเสียง และฟีลลิ่งเปลี่ยนได้เนียนกริบ เหมือนกระจกสะท้อนคนตรงหน้าอย่างตั้งใจ</p><div class="trait-line"></div><small>ADAPTIVE / OBSERVANT / UNREADABLE</small></article>
+          <article class="trait-card reveal"><span class="trait-index">A</span><p class="card-label">SOCIAL</p><h4>คุยง่าย<br />แต่ไม่ธรรมดา</h4><p>ยิ้มรับดี คุยเก่ง อยู่ในจุดบาลานซ์ที่ทำให้คนรอบข้างสบายใจได้เรื่อยๆ</p></article>
+          <article class="trait-card reveal"><span class="trait-index">B</span><p class="card-label">HABIT</p><h4>สบตา<br />ไม่ห่าง</h4><p>ทั้งจากมารยาทในการฟัง และสัญชาตญาณการสังเกตพฤติกรรมของคู่สนทนา</p></article>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="gallery-header reveal"><div><p class="eyebrow">04 / VISUAL EVIDENCE</p><h3>ภาพที่หลุดจากแฟ้ม</h3></div><p>กดเพื่อขยาย<br /><em>และดูใกล้กว่านี้</em></p></div>
+        <div class="gallery-grid">
+          <button class="gallery-item item-wide reveal" data-gallery-index="0" type="button"><img src="https://i.postimg.cc/5NT38fZw/mi-m-ch-x-15-20261120111941.png" alt="Fangsi portrait one" /><span>01 / RED ROOM</span></button>
+          <button class="gallery-item item-tall reveal" data-gallery-index="1" type="button"><img src="https://i.postimg.cc/9Frb4DNp/mi-m-ch-x-15-20261120112217.png" alt="Fangsi portrait two" /><span>02 / AFTER HOURS</span></button>
+          <button class="gallery-item item-square reveal" data-gallery-index="2" type="button"><img src="https://i.postimg.cc/rF3J5qvj/mi-m-ch-x-15-20261120112322.png" alt="Fangsi portrait three" /><span>03 / OBSERVER</span></button>
+          <button class="gallery-item item-square muted reveal" data-gallery-index="3" type="button"><img src="https://i.postimg.cc/TYF9nTZJ/mi-m-ch-x-15-20261120112809.png" alt="Fangsi portrait four" /><span>04 / PRIVATE NOTE</span></button>
+          <button class="gallery-item item-wide bottom-wide reveal" data-gallery-index="4" type="button"><img src="https://i.postimg.cc/MKv5cnrV/mi-m-ch-x-15-20261120113228.png" alt="Fangsi portrait five" /><span>05 / THE VISITOR RETURNS</span></button>
+        </div>
+      </section>
+
+      <section class="section reasons-section">
+        <div class="reason-card reveal"><div class="reason-visual"><span class="big-s">S</span><span class="reason-star">✦</span></div><div class="reason-copy"><p class="eyebrow">05 / VISIT REASON</p><h3>ไม่ได้มาเรียน<br /><em>แต่มาเฝ้าดู</em></h3><p>น้องชายเรียนอยู่ที่นี่ เขาจึงแวะมาหิ้วอาหาร นม หรือของกินมาฝากบ่อยๆ ใช้เวลาว่างนั่งเล่น และคุยกับผู้คนเพื่อเก็บข้อมูล ทำความเข้าใจคาแรกเตอร์และพฤติกรรมให้ลึกขึ้น</p><div class="mini-list"><span>01 <b>น้องชายยังสบายดี</b></span><span>02 <b>ห้องเรียนยังมีเรื่องให้ดู</b></span><span>03 <b>ผู้คนยังน่าสนใจเสมอ</b></span></div></div></div>
+      </section>
+
+      <section class="section closing-section">
+        <div class="closing-ornament">✦ ━━━ ◇ ━━━ ✦</div>
+        <p class="eyebrow">LIKES / HOBBIES / EXPECTATION</p>
+        <h3>ถ้าเห็นเขาอีกครั้ง<br /><em>ลองสบตากลับไป</em></h3>
+        <div class="closing-chips"><span>นมอุ่น</span><span>ตุ๊กตา</span><span>สกินชิพ</span><span>การนอน</span><span>อ่านหนังสือ</span><span>นั่งมองคน</span></div>
+        <p class="closing-note">เขาไม่ได้คาดหวังอะไรให้ตัวเองเป็นพิเศษ<br />แค่เห็นน้องชายใช้ชีวิตได้ราบรื่น และเรียนจบไปได้ด้วยดีก็พอ</p>
+      </section>
+
+      <footer class="footer"><div class="footer-brand">S<span>U</span></div><div><b>SIRITHARA UNIVERSITY</b><small>LEARN · PLAY · CHASE THE DREAM</small></div><div class="footer-end">ARCHIVE CLOSED<br /><span>✦ 2026</span></div></footer>
+    </main>
+
+    <div class="quote-toast" id="quoteToast" role="status"><span>FIELD NOTE</span><p></p></div>
+    <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="ดูภาพขนาดใหญ่"><button class="modal-close" id="modalClose" type="button" aria-label="ปิดภาพ">×</button><button class="modal-arrow prev" id="modalPrev" type="button" aria-label="ภาพก่อนหน้า">←</button><figure><img id="modalImage" src="" alt="" /><figcaption><span id="modalCaption"></span><i id="modalCount"></i></figcaption></figure><button class="modal-arrow next" id="modalNext" type="button" aria-label="ภาพถัดไป">→</button></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
